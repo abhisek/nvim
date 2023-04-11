@@ -10,9 +10,12 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'feline-nvim/feline.nvim'
 Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-rails'
 
 Plug 'EdenEast/nightfox.nvim'
 Plug 'windwp/nvim-autopairs'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 
 call plug#end()
 
@@ -21,9 +24,20 @@ colorscheme carbonfox
 set termguicolors
 
 lua << EOF
+require("nvim-treesitter.configs").setup {
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "go", "ruby", "javascript" },
+	sync_install = false,
+	auto_install = true,
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = false,
+	},
+}
+
 require("telescope").setup{}
 require("telescope").load_extension "file_browser"
 require("nvim-autopairs").setup{}
+require("bufferline").setup{}
 EOF
 
 set nocompatible
@@ -202,7 +216,8 @@ augroup END
 au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
-autocmd BufEnter *.go colorscheme nofrils-dark
+
+autocmd BufNewFile,BufRead *.html.erb setl filetype=html sw=2 ts=2 sts=2
 
 autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
 
