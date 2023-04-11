@@ -17,6 +17,9 @@ Plug 'windwp/nvim-autopairs'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+
 call plug#end()
 
 set background=dark
@@ -263,3 +266,14 @@ set wildignore+=*.pyc
 set wildignore+=*.orig
 
 let g:terraform_fmt_on_save=1
+
+set conceallevel=0
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_follow_anchor = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
