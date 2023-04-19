@@ -29,7 +29,7 @@ set termguicolors
 
 lua << EOF
 require("nvim-treesitter.configs").setup {
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "go", "ruby", "javascript" },
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "go", "ruby", "javascript", "typescript" },
 	sync_install = false,
 	auto_install = true,
 	highlight = {
