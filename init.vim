@@ -4,6 +4,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -39,6 +40,7 @@ require("nvim-treesitter.configs").setup {
 
 require("telescope").setup{}
 require("telescope").load_extension "file_browser"
+require("telescope").load_extension "live_grep_args"
 require("nvim-autopairs").setup{}
 require("bufferline").setup{}
 EOF
@@ -187,7 +189,7 @@ let g:mapleader = ","
 nnoremap <silent> <C-p> <cmd>Telescope find_files<cr>
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep grep_open_files=true<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fB <cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
