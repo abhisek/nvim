@@ -20,6 +20,7 @@ Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -202,6 +203,11 @@ nnoremap <C-z> :bprev<CR>
 
 nnoremap <space> zz
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
