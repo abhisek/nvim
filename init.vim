@@ -23,11 +23,13 @@ Plug 'preservim/vim-markdown'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ellisonleao/gruvbox.nvim'
 
 call plug#end()
 
 set background=dark
-colorscheme carbonfox
+" colorscheme carbonfox
+colorscheme gruvbox
 set termguicolors
 
 lua << EOF
@@ -230,7 +232,8 @@ au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
-autocmd BufNewFile,BufRead *.html.erb setl filetype=html sw=2 ts=2 sts=2
+autocmd BufNewFile,BufRead *.erb setl filetype=html sw=2 ts=2 sts=2
+autocmd BufNewFile,BufRead *.css setl filetype=css sw=2 ts=2 sts=2
 
 autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
 
