@@ -24,6 +24,11 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
@@ -48,6 +53,7 @@ require("telescope").load_extension "file_browser"
 require("telescope").load_extension "live_grep_args"
 require("nvim-autopairs").setup{}
 require("bufferline").setup{}
+require('lualine').setup{}
 EOF
 
 set nocompatible
