@@ -29,6 +29,7 @@ Plug 'tpope/vim-rails'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -229,6 +230,7 @@ au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.rb setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.js setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.ts setlocal expandtab ts=2 sw=2
 
 augroup filetypedetect
 	au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
