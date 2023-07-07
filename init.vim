@@ -231,6 +231,8 @@ au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.rb setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.js setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.ts setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.mjs setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.cjs setlocal expandtab ts=2 sw=2
 
 augroup filetypedetect
 	au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
