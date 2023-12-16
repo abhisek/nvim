@@ -21,9 +21,24 @@
       ],
       "initializationOptions": {},
       "settings": {}
+    },
+    "rubocop": {
+      "command": "bundle",
+      "args": [
+        "exec",
+        "rubocop",
+        "--lsp"
+      ],
+      "filetypes": [
+        "ruby"
+      ],
+      "rootPatterns": [
+        ".git",
+        "Gemfile"
+      ],
+      "requireRootPattern": true
     }
   },
-  "snippets.ultisnips.pythonPrompt": false,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true
 }
