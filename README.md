@@ -22,3 +22,8 @@ git clone https://github.com/abhisek/nvim-config ~/.config/nvim
 |-----------------------------|--------------|
 | Copy selection to clipboard | `"+y`        |
 | Copy buffer to clipboard    | `:w !pbcopy` |
+
+## Troubleshooting
+
+* Tree Sitter error with `invalid note type at position`. [Reference](https://github.com/nvim-treesitter/nvim-treesitter#i-get-query-error-invalid-node-type-at-position)
+
