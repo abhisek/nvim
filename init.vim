@@ -30,6 +30,7 @@ Plug 'tpope/vim-rails'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'tpope/vim-fugitive'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
