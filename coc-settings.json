@@ -8,7 +8,7 @@
       "trace.server": "verbose",
       "filetypes": [
         "go"
-      ]
+      ],
     },
     "terraform": {
       "command": "terraform-ls",
@@ -43,5 +43,4 @@
   "typescript.suggest.autoImports": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "typescript.preferences.quoteStyle": "double",
-  "typescript.suggest.jsdoc.generateReturns": true
 }
