@@ -8,5 +8,6 @@ npm install \
   coc-json \
   coc-css \
   coc-solargraph \
+  coc-jedi \
   --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
