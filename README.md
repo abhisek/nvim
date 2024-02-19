@@ -18,10 +18,12 @@ git clone https://github.com/abhisek/nvim-config ~/.config/nvim
 
 ## Things to Remember
 
-| Function                    | Command      |
-|-----------------------------|--------------|
-| Copy selection to clipboard | `"+y`        |
-| Copy buffer to clipboard    | `:w !pbcopy` |
+| Function                    | Command                  |
+|-----------------------------|--------------------------|
+| Copy selection to clipboard | `"+y`                    |
+| Copy buffer to clipboard    | `:w !pbcopy`             |
+| Escape terminal mode        | `<c-\><c-n>`             |
+| Line-break format select    | `v` to select, then `gq` |
 
 ## Troubleshooting
 

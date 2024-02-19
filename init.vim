@@ -363,3 +363,9 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+" Github Copilot
+let g:copilot#enabled = 1
+imap <silent> <C-j> <Plug>(copilot-next)
+imap <silent> <C-k> <Plug>(copilot-previous)
+imap <silent> <C-\> <Plug>(copilot-dismiss)
+
