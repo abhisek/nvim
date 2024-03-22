@@ -32,6 +32,8 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'github/copilot.vim'
 
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+
 call plug#end()
 
 set background=dark
