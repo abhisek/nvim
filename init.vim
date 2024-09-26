@@ -55,6 +55,8 @@ require("nvim-treesitter.configs").setup {
 require("telescope").setup{}
 require("telescope").load_extension "file_browser"
 require("telescope").load_extension "live_grep_args"
+
+
 require("nvim-autopairs").setup{}
 require("bufferline").setup{}
 require('lualine').setup{}
@@ -203,7 +205,7 @@ let g:mapleader = ","
 
 nnoremap <silent> <C-p> <cmd>Telescope find_files<cr>
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').buffers({sort_mru = true, ignore_current_buffer = true})<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep grep_open_files=true<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fB <cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>
@@ -249,7 +251,7 @@ au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
-autocmd BufNewFile,BufRead *.erb setl filetype=html sw=2 ts=2 sts=2
+autocmd BufNewFile,BufRead *.erb setl filetype=eruby sw=2 ts=2 sts=2
 autocmd BufNewFile,BufRead *.css setl filetype=css sw=2 ts=2 sts=2
 
 autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab

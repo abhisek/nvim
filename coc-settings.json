@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSave": true,
+  "solargraph.transport": "socket",
   "languageserver": {
     "go": {
       "command": "gopls",
